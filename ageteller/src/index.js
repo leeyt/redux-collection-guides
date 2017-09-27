@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import App from './components/App';
+
 ReactDOM.render(
-  <div>
-    <h2>AgeTeller Application</h2>
-  </div>,
+  <App />,
   document.getElementById('root')
 );
