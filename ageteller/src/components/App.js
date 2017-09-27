@@ -1,10 +1,20 @@
 import React, { Component } from 'react';
 
+import { Form, FormControl, Button } from 'react-bootstrap';
+
 class App extends Component {
   render() {
     return (
       <div>
-        <h2>AgeTeller: App component</h2>
+        <Form inline>
+          <FormControl 
+            type="date"
+          />
+          {' '}
+          <Button>
+            Submit
+          </Button>
+        </Form>
       </div>
     )
   }
