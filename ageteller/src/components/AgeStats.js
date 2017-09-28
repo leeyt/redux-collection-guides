@@ -19,7 +19,7 @@ class AgeStats extends Component {
 
   render() {
     return (
-      <div>
+      <div className="age-stats fade">
         <h4>Congrats on staying alive for {this.timeSince(this.props.date)} on this planet.</h4>
         <img
           className="party-popper"

@@ -8,3 +8,17 @@
   width: 200px;
   height: 200px;
 }
+
+.age-stats {
+  opacity: 1;
+}
+
+.fade {
+  animation-name: fade-in;
+  animation-duration: 2s;
+}
+
+@keyframes fade-in {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
