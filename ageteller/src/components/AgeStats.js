@@ -21,7 +21,7 @@ class AgeStats extends Component {
     return (
       <div>
         <h4>Congrats on staying alive for {this.timeSince(this.props.date)} on this planet.</h4>
-        <img 
+        <img
           className="party-popper"
           src={partyPopper}
           alt="party-popper"
