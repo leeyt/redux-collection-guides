@@ -8,8 +8,13 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      newDate: ''
+      newDate: '',
+      birthday: '1992-06-21'
     }
+  }
+
+  changeBirthday() {
+    this.setState({ birthday: this.state.newDate });
   }
 
   render() {
@@ -22,7 +27,9 @@ class App extends Component {
             onChange={event => this.setState({ newDate: event.target.value })}
           />
           {' '}
-          <Button>
+          <Button
+            onClick={() => this.changeBirthday() }
+          >
             Submit
           </Button>
         </Form>
