@@ -3,10 +3,24 @@ import { connect } from 'react-redux';
 
 class CharacterList extends Component {
   render() {
-    console.log('this.props', this.props);
+    let { characters } = this.props;
 
     return (
-      <div />
+      <div>
+        <h4>Characters</h4>
+        <ul>
+          {
+            characters.map(character => {
+              return (
+                <li key={character.id}>
+                  <div>{character.name}</div>
+                  <div>x</div>
+                </li>
+              )
+            })
+          }
+        </ul>
+      </div>
     )
   }
 }
