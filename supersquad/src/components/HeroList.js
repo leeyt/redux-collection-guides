@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+import { removeCharacterById } from '../actions';
+
 class HeroList extends Component {
   render() {
     let { heroes } = this.props;
@@ -23,6 +25,7 @@ class HeroList extends Component {
                 </div>
                 <div
                   className="list-item right-button"
+                  onClick={() => this.props.removeCharacterById(hero.id)}
                 >
                   x
                 </div>
@@ -42,4 +45,4 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps, null)(HeroList);
+export default connect(mapStateToProps, { removeCharacterById })(HeroList);
