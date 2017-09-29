@@ -7,7 +7,7 @@ class HeroList extends Component {
 
     return (
       <div>
-        <h4>Heroes</h4>
+        <h4>Your Hero Squad</h4>
         <ul className="list-group">
         {
           heroes.map(hero => {
