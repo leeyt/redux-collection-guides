@@ -6,10 +6,12 @@ import { Provider } from 'react-redux';
 
 import App from './components/App';
 
+import { addCharacterById } from './actions';
 import rootReducer from './reducers';
 
 const store = createStore(rootReducer);
-console.log('store.getState()', store.getState());
+store.subscribe(() => console.log('state', store.getState()));
+store.dispatch(addCharacterById(1));
 
 ReactDOM.render(
   <Provider store={store}>
