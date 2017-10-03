@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+
+import { favoriteRecipe } from '../actions'
 
 class RecipeItem extends Component {
   render() {
@@ -6,6 +9,12 @@ class RecipeItem extends Component {
 
     return (
       <div className="recipe-item">
+        <div
+          className="star"
+          onClick={() => this.props.favoriteRecipe(this.props.recipe)}
+        >
+          &#9734;
+        </div>
         <div className="recipe-text">
           <a href={recipe.href}>
             <h4>{recipe.title}</h4>
@@ -22,4 +31,4 @@ class RecipeItem extends Component {
   }
 }
 
-export default RecipeItem;
+export default connect(null, { favoriteRecipe })(RecipeItem);
