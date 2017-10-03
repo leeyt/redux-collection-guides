@@ -6,13 +6,20 @@ import RecipeItem from './RecipeItem';
 
 class RecipeList extends Component {
   render() {
+    let { recipes, favoriteRecipes } = this.props;
     return (
       <div>
-        <h4 className="link">
-          <Link to='/favorites'>Favorites</Link>
-        </h4>
       {
-        this.props.recipes.map((recipe, index) => {
+        favoriteRecipes.length === 0
+          ?
+            <div />
+          :
+            <h4 className="link">
+              <Link to='/favorites'>Favorites</Link>
+            </h4>
+      }
+      {
+        recipes.map((recipe, index) => {
           return (
             <RecipeItem
               key={index}
